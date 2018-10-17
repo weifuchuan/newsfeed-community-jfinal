@@ -79,17 +79,15 @@ public class MainConfig extends JFinalConfig {
     // 强制指定复合主键的次序，避免不同的开发环境生成在 _MappingKit 中的复合主键次序不相同
     arp.setPrimaryKey("post_like", "accountId,postId");
     arp.setPrimaryKey("post_nay", "accountId,postId");
-    me.add(arp);
     arp.setShowSql(p.getBoolean("devMode", false));
 
     arp.getEngine().setToClassPathSourceFactory();
     arp.addSqlTemplate("/sql/all_sqls.sql");
 
-    me.add(new EhCachePlugin());
-
     //添加到插件列表中
     me.add(dbPlugin);
     me.add(arp);
+    me.add(new EhCachePlugin());
   }
 
   /**

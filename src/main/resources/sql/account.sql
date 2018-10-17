@@ -1,12 +1,12 @@
 #sql("login")
 
-  select * from `account` where username = ? and password = ?
+  select * from `account` where username = #para(0) and password = #para(1)
 
 #end
 
 #sql("accountExists")
 
-  select count(*) from `account` where username = ?
+  select count(*) `count` from `account` where username = #para(0)
 
 #end
 

@@ -25,6 +25,7 @@ public class _MappingKit {
 		arp.addMapping("post_like", "accountId,postId", PostLike.class);
 		// Composite Primary Key order: accountId,postId
 		arp.addMapping("post_nay", "accountId,postId", PostNay.class);
+		arp.addMapping("session", "id", Session.class);
 	}
 }
 

@@ -6,18 +6,23 @@ import com.jfinal.aop.Inject;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.interceptor.POST;
 import com.jfinal.kit.Ret;
+import com.jfinal.plugin.activerecord.Db;
+import com.jfinal.plugin.activerecord.SqlPara;
 
 
 public class LoginController extends Controller {
 
-  private static final Account accountDao = new Account().dao();
+  private static final LoginService srv = new LoginService();
 
   @Before(POST.class)
   public void index() {
-    Account account = accountDao.findFirst("account.login", getPara("username"), getPara("password"));
-    if (account == null){
+    String username = getPara("username");
+    String password = getPara("password");
+    renderJson(srv.login(username, password));
+  }
 
-    }
+  public void isLogged(){
+
   }
 
 }
