@@ -18,9 +18,16 @@ public class LoginController extends Controller {
   public void index() {
     String username = getPara("username");
     String password = getPara("password");
-    renderJson(srv.login(username, password));
+    Ret ret = srv.login(username, password);
+    if (ret.isOk()) {
+      String sessionId = ret.getStr(LoginService.sessionIdName);
+      int maxAgeInSeconds = ret.getInt("maxAgeInSeconds");
+      setCookie(LoginService.sessionIdName, sessionId, maxAgeInSeconds, true);
+    }
+    renderJson(ret);
   }
 
+  @Before(POST.class)
   public void isLogged(){
 
   }

@@ -1,5 +1,6 @@
 package com.fuchuan.nsc.common.config;
 
+import com.fuchuan.nsc.common.interceptor.LoginSessionInterceptor;
 import com.fuchuan.nsc.common.model._MappingKit;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
@@ -95,6 +96,7 @@ public class MainConfig extends JFinalConfig {
    */
   @Override
   public void configInterceptor(Interceptors me) {
+    me.add(new LoginSessionInterceptor());
     me.addGlobalActionInterceptor(new SessionInViewInterceptor());
   }
 

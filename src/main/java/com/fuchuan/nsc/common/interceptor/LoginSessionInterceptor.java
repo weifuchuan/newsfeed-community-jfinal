@@ -1,5 +1,6 @@
 package com.fuchuan.nsc.common.interceptor;
 
+import com.fuchuan.nsc.common.kit.IpKit;
 import com.fuchuan.nsc.common.model.Account;
 import com.fuchuan.nsc.login.LoginService;
 import com.jfinal.aop.Interceptor;
@@ -23,8 +24,8 @@ public class LoginSessionInterceptor implements Interceptor {
     if (sessionId != null) {
       loginAccount = LoginService.me.getLoginAccountWithSessionId(sessionId);
       if (loginAccount == null) {
-//        String loginIp = IpKit.getRealIp(c.getRequest());
-//        loginAccount = LoginService.me.loginWithSessionId(sessionId, loginIp);
+        String loginIp = IpKit.getRealIp(c.getRequest());
+        loginAccount = LoginService.me.loginWithSessionId(sessionId, loginIp);
       }
       if (loginAccount != null) {
         // 用户登录账号
