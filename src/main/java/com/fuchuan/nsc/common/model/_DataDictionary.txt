@@ -1,0 +1,74 @@
+Table: account
+----------+------------------+------+-----+---------+---------
+ Field    | Type             | Null | Key | Default | Remarks 
+----------+------------------+------+-----+---------+---------
+ id       | INT UNSIGNED(10) | NO   | PRI |         |         
+ username | VARCHAR(255)     | NO   |     |         |         
+ password | VARCHAR(255)     | NO   |     |         |         
+ avatar   | VARCHAR(255)     | NO   |     |         |         
+----------+------------------+------+-----+---------+---------
+
+Table: comment
+-----------+------------------+------+-----+---------+---------
+ Field     | Type             | Null | Key | Default | Remarks 
+-----------+------------------+------+-----+---------+---------
+ id        | INT UNSIGNED(10) | NO   | PRI |         |         
+ accountId | INT UNSIGNED(10) | NO   |     |         |         
+ postId    | INT UNSIGNED(10) | NO   |     |         |         
+ refId     | INT UNSIGNED(10) | YES  |     |         |         
+ content   | TEXT(65535)      | NO   |     |         |         
+ createAt  | INT UNSIGNED(10) | NO   |     |         |         
+-----------+------------------+------+-----+---------+---------
+
+Table: follow
+----------+------------------+------+-----+---------+---------
+ Field    | Type             | Null | Key | Default | Remarks 
+----------+------------------+------+-----+---------+---------
+ id       | INT UNSIGNED(10) | NO   | PRI |         |         
+ fromId   | INT UNSIGNED(10) | NO   |     |         |         
+ toId     | INT UNSIGNED(10) | NO   |     |         |         
+ createAt | INT UNSIGNED(10) | NO   |     |         |         
+----------+------------------+------+-----+---------+---------
+
+Table: message
+----------+------------------+------+-----+---------+---------
+ Field    | Type             | Null | Key | Default | Remarks 
+----------+------------------+------+-----+---------+---------
+ id       | INT UNSIGNED(10) | NO   | PRI |         |         
+ content  | TEXT(65535)      | NO   |     |         |         
+ fromId   | INT UNSIGNED(10) | NO   |     |         |         
+ toId     | INT UNSIGNED(10) | NO   |     |         |         
+ createAt | INT UNSIGNED(10) | NO   |     |         |         
+----------+------------------+------+-----+---------+---------
+
+Table: post
+-----------+------------------+------+-----+---------+---------
+ Field     | Type             | Null | Key | Default | Remarks 
+-----------+------------------+------+-----+---------+---------
+ id        | INT UNSIGNED(10) | NO   | PRI |         |         
+ title     | VARCHAR(255)     | NO   |     |         |         
+ content   | TEXT(65535)      | NO   |     |         |         
+ createAt  | INT(10)          | NO   |     |         |         
+ likeCount | INT(10)          | NO   |     |         |         
+ nayCount  | INT(10)          | NO   |     |         |         
+ modifyAt  | INT(10)          | YES  |     |         |         
+-----------+------------------+------+-----+---------+---------
+
+Table: post_like
+-----------+------------------+------+-----+---------+---------
+ Field     | Type             | Null | Key | Default | Remarks 
+-----------+------------------+------+-----+---------+---------
+ accountId | INT UNSIGNED(10) | NO   | PRI |         |         
+ postId    | INT UNSIGNED(10) | NO   | PRI |         |         
+ createAt  | INT(10)          | NO   |     |         |         
+-----------+------------------+------+-----+---------+---------
+
+Table: post_nay
+-----------+------------------+------+-----+---------+---------
+ Field     | Type             | Null | Key | Default | Remarks 
+-----------+------------------+------+-----+---------+---------
+ accountId | INT UNSIGNED(10) | NO   | PRI |         |         
+ postId    | INT UNSIGNED(10) | NO   | PRI |         |         
+ createAt  | INT(10)          | YES  |     |         |         
+-----------+------------------+------+-----+---------+---------
+
