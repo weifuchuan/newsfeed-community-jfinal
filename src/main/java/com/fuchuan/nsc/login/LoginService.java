@@ -73,4 +73,11 @@ public class LoginService {
   public Account getLoginAccountWithSessionId(String sessionId) {
     return CacheKit.get(loginAccountCacheName, sessionId);
   }
+
+  public void logout(String sessionId) {
+		if (sessionId != null) {
+			CacheKit.remove(loginAccountCacheName, sessionId);
+			Session.dao.deleteById(sessionId);
+		}
+	}
 }

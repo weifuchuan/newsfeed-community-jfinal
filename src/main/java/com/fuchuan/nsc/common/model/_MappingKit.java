@@ -20,11 +20,13 @@ public class _MappingKit {
 		arp.addMapping("comment", "id", Comment.class);
 		arp.addMapping("follow", "id", Follow.class);
 		arp.addMapping("message", "id", Message.class);
+		arp.addMapping("newsfeed", "id", Newsfeed.class);
 		arp.addMapping("post", "id", Post.class);
 		// Composite Primary Key order: accountId,postId
 		arp.addMapping("post_like", "accountId,postId", PostLike.class);
 		// Composite Primary Key order: accountId,postId
 		arp.addMapping("post_nay", "accountId,postId", PostNay.class);
+		arp.addMapping("remind", "accountId", Remind.class);
 		arp.addMapping("session", "id", Session.class);
 	}
 }

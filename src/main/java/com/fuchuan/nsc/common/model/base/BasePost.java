@@ -9,12 +9,12 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings("serial")
 public abstract class BasePost<M extends BasePost<M>> extends Model<M> implements IBean {
 
-	public void setId(java.lang.Long id) {
+	public void setId(java.lang.Integer id) {
 		set("id", id);
 	}
 	
-	public java.lang.Long getId() {
-		return getLong("id");
+	public java.lang.Integer getId() {
+		return getInt("id");
 	}
 
 	public void setTitle(java.lang.String title) {
@@ -33,12 +33,12 @@ public abstract class BasePost<M extends BasePost<M>> extends Model<M> implement
 		return getStr("content");
 	}
 
-	public void setCreateAt(java.lang.Integer createAt) {
+	public void setCreateAt(java.lang.Long createAt) {
 		set("createAt", createAt);
 	}
 	
-	public java.lang.Integer getCreateAt() {
-		return getInt("createAt");
+	public java.lang.Long getCreateAt() {
+		return getLong("createAt");
 	}
 
 	public void setLikeCount(java.lang.Integer likeCount) {
@@ -57,12 +57,20 @@ public abstract class BasePost<M extends BasePost<M>> extends Model<M> implement
 		return getInt("nayCount");
 	}
 
-	public void setModifyAt(java.lang.Integer modifyAt) {
+	public void setModifyAt(java.lang.Long modifyAt) {
 		set("modifyAt", modifyAt);
 	}
 	
-	public java.lang.Integer getModifyAt() {
-		return getInt("modifyAt");
+	public java.lang.Long getModifyAt() {
+		return getLong("modifyAt");
+	}
+
+	public void setAccountId(java.lang.Integer accountId) {
+		set("accountId", accountId);
+	}
+	
+	public java.lang.Integer getAccountId() {
+		return getInt("accountId");
 	}
 
 }

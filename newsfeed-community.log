@@ -424,3 +424,714 @@ Caused by: java.sql.SQLException: No value specified for parameter 1
 	at com.jfinal.plugin.activerecord.Model.find(Model.java:643)
 	at com.jfinal.plugin.activerecord.Model.find(Model.java:660)
 	... 42 more
+
+2018-10-18 17:17:57
+[WARN]-[Thread: qtp1627821297-22]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /sockjs-node/279/m15psnbr/websocket
+
+2018-10-18 17:30:01
+[WARN]-[Thread: qtp1627821297-19]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /api/login/isLogged
+
+2018-10-18 17:30:02
+[WARN]-[Thread: qtp1627821297-16]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /api/login/isLogged
+
+2018-10-18 17:30:03
+[WARN]-[Thread: qtp1627821297-21]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /api/login/isLogged
+
+2018-10-18 17:39:54
+[WARN]-[Thread: qtp1627821297-17]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /api/login/isLogged
+
+2018-10-18 17:39:56
+[WARN]-[Thread: qtp1627821297-18]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /api/login/isLogged
+
+2018-10-18 17:39:57
+[WARN]-[Thread: qtp1627821297-22]-[com.jfinal.core.ActionHandler.handle()]: 404 Action Not Found: /api/login/isLogged
+
+2018-10-18 21:43:47
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+com.jfinal.template.stat.ParseException: Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:100)
+	at com.jfinal.template.stat.ast.Include.<init>(Include.java:83)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:135)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:220)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.Engine.buildTemplateBySourceFactory(Engine.java:163)
+	at com.jfinal.template.Engine.getTemplate(Engine.java:144)
+	at com.jfinal.plugin.activerecord.sql.SqlKit.parseSqlTemplate(SqlKit.java:92)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:224)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:61)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:62)
+	at org.eclipse.jetty.servlet.FilterHolder.initialize(FilterHolder.java:139)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:741)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:374)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1497)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1459)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:847)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:287)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:545)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at com.jfinal.server.jetty.JettyServer$1.onChange(JettyServer.java:134)
+	at com.jfinal.server.jetty.Scanner.compare(Scanner.java:94)
+	at com.jfinal.server.jetty.Scanner.working(Scanner.java:57)
+	at com.jfinal.server.jetty.Scanner.access$000(Scanner.java:31)
+	at com.jfinal.server.jetty.Scanner$1.run(Scanner.java:101)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: com.jfinal.template.stat.ParseException: Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+	at com.jfinal.template.stat.Parser.matchEnd(Parser.java:85)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:222)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:97)
+	... 31 more
+
+2018-10-18 21:43:47
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.kit.LogKit.error()]: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:61)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:62)
+	at org.eclipse.jetty.servlet.FilterHolder.initialize(FilterHolder.java:139)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:741)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:374)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1497)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1459)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:847)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:287)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:545)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at com.jfinal.server.jetty.JettyServer$1.onChange(JettyServer.java:134)
+	at com.jfinal.server.jetty.Scanner.compare(Scanner.java:94)
+	at com.jfinal.server.jetty.Scanner.working(Scanner.java:57)
+	at com.jfinal.server.jetty.Scanner.access$000(Scanner.java:31)
+	at com.jfinal.server.jetty.Scanner$1.run(Scanner.java:101)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: com.jfinal.template.stat.ParseException: Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:100)
+	at com.jfinal.template.stat.ast.Include.<init>(Include.java:83)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:135)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:220)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.Engine.buildTemplateBySourceFactory(Engine.java:163)
+	at com.jfinal.template.Engine.getTemplate(Engine.java:144)
+	at com.jfinal.plugin.activerecord.sql.SqlKit.parseSqlTemplate(SqlKit.java:92)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:224)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 20 more
+Caused by: com.jfinal.template.stat.ParseException: Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+	at com.jfinal.template.stat.Parser.matchEnd(Parser.java:85)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:222)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:97)
+	... 31 more
+
+2018-10-18 21:43:56
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.kit.LogKit.error()]: 
+java.lang.NullPointerException
+	at com.jfinal.plugin.ehcache.EhCachePlugin.stop(EhCachePlugin.java:95)
+	at com.jfinal.core.JFinal.stopPlugins(JFinal.java:113)
+	at com.jfinal.core.JFinalFilter.destroy(JFinalFilter.java:104)
+	at org.eclipse.jetty.servlet.FilterHolder.destroyInstance(FilterHolder.java:178)
+	at org.eclipse.jetty.servlet.FilterHolder.doStop(FilterHolder.java:155)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.servlet.ServletHandler.doStop(ServletHandler.java:223)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.security.SecurityHandler.doStop(SecurityHandler.java:381)
+	at org.eclipse.jetty.security.ConstraintSecurityHandler.doStop(ConstraintSecurityHandler.java:456)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.server.session.SessionHandler.doStop(SessionHandler.java:519)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.server.handler.ContextHandler.stopContext(ContextHandler.java:927)
+	at org.eclipse.jetty.servlet.ServletContextHandler.stopContext(ServletContextHandler.java:381)
+	at org.eclipse.jetty.webapp.WebAppContext.stopWebapp(WebAppContext.java:1503)
+	at org.eclipse.jetty.webapp.WebAppContext.stopContext(WebAppContext.java:1467)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStop(ContextHandler.java:1004)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStop(ServletContextHandler.java:297)
+	at org.eclipse.jetty.webapp.WebAppContext.doStop(WebAppContext.java:569)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at com.jfinal.server.jetty.JettyServer$1.onChange(JettyServer.java:131)
+	at com.jfinal.server.jetty.Scanner.compare(Scanner.java:94)
+	at com.jfinal.server.jetty.Scanner.working(Scanner.java:57)
+	at com.jfinal.server.jetty.Scanner.access$000(Scanner.java:31)
+	at com.jfinal.server.jetty.Scanner$1.run(Scanner.java:101)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+
+2018-10-18 21:43:58
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+com.jfinal.template.stat.ParseException: Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:100)
+	at com.jfinal.template.stat.ast.Include.<init>(Include.java:83)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:135)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:220)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.Engine.buildTemplateBySourceFactory(Engine.java:163)
+	at com.jfinal.template.Engine.getTemplate(Engine.java:144)
+	at com.jfinal.plugin.activerecord.sql.SqlKit.parseSqlTemplate(SqlKit.java:92)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:224)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:61)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:62)
+	at org.eclipse.jetty.servlet.FilterHolder.initialize(FilterHolder.java:139)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:741)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:374)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1497)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1459)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:847)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:287)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:545)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at com.jfinal.server.jetty.JettyServer$1.onChange(JettyServer.java:134)
+	at com.jfinal.server.jetty.Scanner.compare(Scanner.java:94)
+	at com.jfinal.server.jetty.Scanner.working(Scanner.java:57)
+	at com.jfinal.server.jetty.Scanner.access$000(Scanner.java:31)
+	at com.jfinal.server.jetty.Scanner$1.run(Scanner.java:101)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: com.jfinal.template.stat.ParseException: Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+	at com.jfinal.template.stat.Parser.matchEnd(Parser.java:85)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:222)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:97)
+	... 31 more
+
+2018-10-18 21:43:58
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.kit.LogKit.error()]: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:61)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:62)
+	at org.eclipse.jetty.servlet.FilterHolder.initialize(FilterHolder.java:139)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:741)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:374)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1497)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1459)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:847)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:287)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:545)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at com.jfinal.server.jetty.JettyServer$1.onChange(JettyServer.java:134)
+	at com.jfinal.server.jetty.Scanner.compare(Scanner.java:94)
+	at com.jfinal.server.jetty.Scanner.working(Scanner.java:57)
+	at com.jfinal.server.jetty.Scanner.access$000(Scanner.java:31)
+	at com.jfinal.server.jetty.Scanner$1.run(Scanner.java:101)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: com.jfinal.template.stat.ParseException: Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:100)
+	at com.jfinal.template.stat.ast.Include.<init>(Include.java:83)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:135)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:220)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.Engine.buildTemplateBySourceFactory(Engine.java:163)
+	at com.jfinal.template.Engine.getTemplate(Engine.java:144)
+	at com.jfinal.plugin.activerecord.sql.SqlKit.parseSqlTemplate(SqlKit.java:92)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:224)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 20 more
+Caused by: com.jfinal.template.stat.ParseException: Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+	at com.jfinal.template.stat.Parser.matchEnd(Parser.java:85)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:222)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:97)
+	... 31 more
+
+2018-10-18 21:44:01
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.kit.LogKit.error()]: 
+java.lang.NullPointerException
+	at com.jfinal.plugin.ehcache.EhCachePlugin.stop(EhCachePlugin.java:95)
+	at com.jfinal.core.JFinal.stopPlugins(JFinal.java:113)
+	at com.jfinal.core.JFinalFilter.destroy(JFinalFilter.java:104)
+	at org.eclipse.jetty.servlet.FilterHolder.destroyInstance(FilterHolder.java:178)
+	at org.eclipse.jetty.servlet.FilterHolder.doStop(FilterHolder.java:155)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.servlet.ServletHandler.doStop(ServletHandler.java:223)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.security.SecurityHandler.doStop(SecurityHandler.java:381)
+	at org.eclipse.jetty.security.ConstraintSecurityHandler.doStop(ConstraintSecurityHandler.java:456)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.server.session.SessionHandler.doStop(SessionHandler.java:519)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.server.handler.ContextHandler.stopContext(ContextHandler.java:927)
+	at org.eclipse.jetty.servlet.ServletContextHandler.stopContext(ServletContextHandler.java:381)
+	at org.eclipse.jetty.webapp.WebAppContext.stopWebapp(WebAppContext.java:1503)
+	at org.eclipse.jetty.webapp.WebAppContext.stopContext(WebAppContext.java:1467)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStop(ContextHandler.java:1004)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStop(ServletContextHandler.java:297)
+	at org.eclipse.jetty.webapp.WebAppContext.doStop(WebAppContext.java:569)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at com.jfinal.server.jetty.JettyServer$1.onChange(JettyServer.java:131)
+	at com.jfinal.server.jetty.Scanner.compare(Scanner.java:94)
+	at com.jfinal.server.jetty.Scanner.working(Scanner.java:57)
+	at com.jfinal.server.jetty.Scanner.access$000(Scanner.java:31)
+	at com.jfinal.server.jetty.Scanner$1.run(Scanner.java:101)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+
+2018-10-18 21:44:02
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+com.jfinal.template.stat.ParseException: Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:100)
+	at com.jfinal.template.stat.ast.Include.<init>(Include.java:83)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:135)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:220)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.Engine.buildTemplateBySourceFactory(Engine.java:163)
+	at com.jfinal.template.Engine.getTemplate(Engine.java:144)
+	at com.jfinal.plugin.activerecord.sql.SqlKit.parseSqlTemplate(SqlKit.java:92)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:224)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:61)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:62)
+	at org.eclipse.jetty.servlet.FilterHolder.initialize(FilterHolder.java:139)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:741)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:374)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1497)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1459)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:847)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:287)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:545)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at com.jfinal.server.jetty.JettyServer$1.onChange(JettyServer.java:134)
+	at com.jfinal.server.jetty.Scanner.compare(Scanner.java:94)
+	at com.jfinal.server.jetty.Scanner.working(Scanner.java:57)
+	at com.jfinal.server.jetty.Scanner.access$000(Scanner.java:31)
+	at com.jfinal.server.jetty.Scanner$1.run(Scanner.java:101)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: com.jfinal.template.stat.ParseException: Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+	at com.jfinal.template.stat.Parser.matchEnd(Parser.java:85)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:222)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:97)
+	... 31 more
+
+2018-10-18 21:44:02
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.kit.LogKit.error()]: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:61)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:62)
+	at org.eclipse.jetty.servlet.FilterHolder.initialize(FilterHolder.java:139)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:741)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:374)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1497)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1459)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:847)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:287)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:545)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at com.jfinal.server.jetty.JettyServer$1.onChange(JettyServer.java:134)
+	at com.jfinal.server.jetty.Scanner.compare(Scanner.java:94)
+	at com.jfinal.server.jetty.Scanner.working(Scanner.java:57)
+	at com.jfinal.server.jetty.Scanner.access$000(Scanner.java:31)
+	at com.jfinal.server.jetty.Scanner$1.run(Scanner.java:101)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: com.jfinal.template.stat.ParseException: Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+Template: "/sql/all_sqls.sql". Line: 2
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:100)
+	at com.jfinal.template.stat.ast.Include.<init>(Include.java:83)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:135)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:220)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.Engine.buildTemplateBySourceFactory(Engine.java:163)
+	at com.jfinal.template.Engine.getTemplate(Engine.java:144)
+	at com.jfinal.plugin.activerecord.sql.SqlKit.parseSqlTemplate(SqlKit.java:92)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:224)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 20 more
+Caused by: com.jfinal.template.stat.ParseException: Can not match the #end of directive #sql
+Template: "/sql/account.sql". Line: 13
+	at com.jfinal.template.stat.Parser.matchEnd(Parser.java:85)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:222)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:97)
+	... 31 more
+
+2018-10-18 21:44:11
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.kit.LogKit.error()]: 
+java.lang.NullPointerException
+	at com.jfinal.plugin.ehcache.EhCachePlugin.stop(EhCachePlugin.java:95)
+	at com.jfinal.core.JFinal.stopPlugins(JFinal.java:113)
+	at com.jfinal.core.JFinalFilter.destroy(JFinalFilter.java:104)
+	at org.eclipse.jetty.servlet.FilterHolder.destroyInstance(FilterHolder.java:178)
+	at org.eclipse.jetty.servlet.FilterHolder.doStop(FilterHolder.java:155)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.servlet.ServletHandler.doStop(ServletHandler.java:223)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.security.SecurityHandler.doStop(SecurityHandler.java:381)
+	at org.eclipse.jetty.security.ConstraintSecurityHandler.doStop(ConstraintSecurityHandler.java:456)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.server.session.SessionHandler.doStop(SessionHandler.java:519)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.server.handler.ContextHandler.stopContext(ContextHandler.java:927)
+	at org.eclipse.jetty.servlet.ServletContextHandler.stopContext(ServletContextHandler.java:381)
+	at org.eclipse.jetty.webapp.WebAppContext.stopWebapp(WebAppContext.java:1503)
+	at org.eclipse.jetty.webapp.WebAppContext.stopContext(WebAppContext.java:1467)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStop(ContextHandler.java:1004)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStop(ServletContextHandler.java:297)
+	at org.eclipse.jetty.webapp.WebAppContext.doStop(WebAppContext.java:569)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at com.jfinal.server.jetty.JettyServer$1.onChange(JettyServer.java:131)
+	at com.jfinal.server.jetty.Scanner.compare(Scanner.java:94)
+	at com.jfinal.server.jetty.Scanner.working(Scanner.java:57)
+	at com.jfinal.server.jetty.Scanner.access$000(Scanner.java:31)
+	at com.jfinal.server.jetty.Scanner$1.run(Scanner.java:101)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+
+2018-10-18 21:47:14
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.core.Config.startPlugins()]: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+The parameter of #para directive can not be blank
+Template: "/sql/account.sql". Line: 16
+Template: "/sql/all_sqls.sql". Line: 2
+com.jfinal.template.stat.ParseException: The parameter of #para directive can not be blank
+Template: "/sql/account.sql". Line: 16
+Template: "/sql/all_sqls.sql". Line: 2
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:100)
+	at com.jfinal.template.stat.ast.Include.<init>(Include.java:83)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:135)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:220)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.Engine.buildTemplateBySourceFactory(Engine.java:163)
+	at com.jfinal.template.Engine.getTemplate(Engine.java:144)
+	at com.jfinal.plugin.activerecord.sql.SqlKit.parseSqlTemplate(SqlKit.java:92)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:224)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:61)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:62)
+	at org.eclipse.jetty.servlet.FilterHolder.initialize(FilterHolder.java:139)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:741)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:374)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1497)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1459)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:847)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:287)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:545)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at com.jfinal.server.jetty.JettyServer$1.onChange(JettyServer.java:134)
+	at com.jfinal.server.jetty.Scanner.compare(Scanner.java:94)
+	at com.jfinal.server.jetty.Scanner.working(Scanner.java:57)
+	at com.jfinal.server.jetty.Scanner.access$000(Scanner.java:31)
+	at com.jfinal.server.jetty.Scanner$1.run(Scanner.java:101)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: com.jfinal.template.stat.ParseException: The parameter of #para directive can not be blank
+Template: "/sql/account.sql". Line: 16
+	at com.jfinal.plugin.activerecord.sql.ParaDirective.setExprList(ParaDirective.java:77)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:217)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:220)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:97)
+	... 31 more
+
+2018-10-18 21:47:14
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.kit.LogKit.error()]: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+The parameter of #para directive can not be blank
+Template: "/sql/account.sql". Line: 16
+Template: "/sql/all_sqls.sql". Line: 2
+java.lang.RuntimeException: Plugin start error: com.jfinal.plugin.activerecord.ActiveRecordPlugin. 
+The parameter of #para directive can not be blank
+Template: "/sql/account.sql". Line: 16
+Template: "/sql/all_sqls.sql". Line: 2
+	at com.jfinal.core.Config.startPlugins(Config.java:137)
+	at com.jfinal.core.Config.configPluginWithOrder(Config.java:71)
+	at com.jfinal.core.Config.configJFinal(Config.java:56)
+	at com.jfinal.core.JFinal.init(JFinal.java:61)
+	at com.jfinal.core.JFinalFilter.init(JFinalFilter.java:62)
+	at org.eclipse.jetty.servlet.FilterHolder.initialize(FilterHolder.java:139)
+	at org.eclipse.jetty.servlet.ServletHandler.initialize(ServletHandler.java:741)
+	at org.eclipse.jetty.servlet.ServletContextHandler.startContext(ServletContextHandler.java:374)
+	at org.eclipse.jetty.webapp.WebAppContext.startWebapp(WebAppContext.java:1497)
+	at org.eclipse.jetty.webapp.WebAppContext.startContext(WebAppContext.java:1459)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStart(ContextHandler.java:847)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStart(ServletContextHandler.java:287)
+	at org.eclipse.jetty.webapp.WebAppContext.doStart(WebAppContext.java:545)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.start(AbstractLifeCycle.java:68)
+	at com.jfinal.server.jetty.JettyServer$1.onChange(JettyServer.java:134)
+	at com.jfinal.server.jetty.Scanner.compare(Scanner.java:94)
+	at com.jfinal.server.jetty.Scanner.working(Scanner.java:57)
+	at com.jfinal.server.jetty.Scanner.access$000(Scanner.java:31)
+	at com.jfinal.server.jetty.Scanner$1.run(Scanner.java:101)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+Caused by: com.jfinal.template.stat.ParseException: The parameter of #para directive can not be blank
+Template: "/sql/account.sql". Line: 16
+Template: "/sql/all_sqls.sql". Line: 2
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:100)
+	at com.jfinal.template.stat.ast.Include.<init>(Include.java:83)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:135)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:220)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.Engine.buildTemplateBySourceFactory(Engine.java:163)
+	at com.jfinal.template.Engine.getTemplate(Engine.java:144)
+	at com.jfinal.plugin.activerecord.sql.SqlKit.parseSqlTemplate(SqlKit.java:92)
+	at com.jfinal.plugin.activerecord.ActiveRecordPlugin.start(ActiveRecordPlugin.java:224)
+	at com.jfinal.core.Config.startPlugins(Config.java:128)
+	... 20 more
+Caused by: com.jfinal.template.stat.ParseException: The parameter of #para directive can not be blank
+Template: "/sql/account.sql". Line: 16
+	at com.jfinal.plugin.activerecord.sql.ParaDirective.setExprList(ParaDirective.java:77)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:217)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.stat(Parser.java:220)
+	at com.jfinal.template.stat.Parser.statList(Parser.java:101)
+	at com.jfinal.template.stat.Parser.parse(Parser.java:91)
+	at com.jfinal.template.stat.ast.Include.parseSubTemplate(Include.java:97)
+	... 31 more
+
+2018-10-18 21:47:19
+[ERROR]-[Thread: JFinal-Scanner]-[com.jfinal.kit.LogKit.error()]: 
+java.lang.NullPointerException
+	at com.jfinal.plugin.ehcache.EhCachePlugin.stop(EhCachePlugin.java:95)
+	at com.jfinal.core.JFinal.stopPlugins(JFinal.java:113)
+	at com.jfinal.core.JFinalFilter.destroy(JFinalFilter.java:104)
+	at org.eclipse.jetty.servlet.FilterHolder.destroyInstance(FilterHolder.java:178)
+	at org.eclipse.jetty.servlet.FilterHolder.doStop(FilterHolder.java:155)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.servlet.ServletHandler.doStop(ServletHandler.java:223)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.security.SecurityHandler.doStop(SecurityHandler.java:381)
+	at org.eclipse.jetty.security.ConstraintSecurityHandler.doStop(ConstraintSecurityHandler.java:456)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.server.session.SessionHandler.doStop(SessionHandler.java:519)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.stop(ContainerLifeCycle.java:149)
+	at org.eclipse.jetty.util.component.ContainerLifeCycle.doStop(ContainerLifeCycle.java:170)
+	at org.eclipse.jetty.server.handler.AbstractHandler.doStop(AbstractHandler.java:124)
+	at org.eclipse.jetty.server.handler.ContextHandler.stopContext(ContextHandler.java:927)
+	at org.eclipse.jetty.servlet.ServletContextHandler.stopContext(ServletContextHandler.java:381)
+	at org.eclipse.jetty.webapp.WebAppContext.stopWebapp(WebAppContext.java:1503)
+	at org.eclipse.jetty.webapp.WebAppContext.stopContext(WebAppContext.java:1467)
+	at org.eclipse.jetty.server.handler.ContextHandler.doStop(ContextHandler.java:1004)
+	at org.eclipse.jetty.servlet.ServletContextHandler.doStop(ServletContextHandler.java:297)
+	at org.eclipse.jetty.webapp.WebAppContext.doStop(WebAppContext.java:569)
+	at org.eclipse.jetty.util.component.AbstractLifeCycle.stop(AbstractLifeCycle.java:89)
+	at com.jfinal.server.jetty.JettyServer$1.onChange(JettyServer.java:131)
+	at com.jfinal.server.jetty.Scanner.compare(Scanner.java:94)
+	at com.jfinal.server.jetty.Scanner.working(Scanner.java:57)
+	at com.jfinal.server.jetty.Scanner.access$000(Scanner.java:31)
+	at com.jfinal.server.jetty.Scanner$1.run(Scanner.java:101)
+	at java.util.TimerThread.mainLoop(Timer.java:555)
+	at java.util.TimerThread.run(Timer.java:505)
+
+2018-10-18 22:29:47
+[ERROR]-[Thread: main]-[com.jfinal.kit.LogKit.error()]: port: 80 already in use!
+java.lang.IllegalStateException: port: 80 already in use!
+	at com.jfinal.server.jetty.JettyServer.doStart(JettyServer.java:86)
+	at com.jfinal.server.jetty.JettyServer.start(JettyServer.java:69)
+	at com.jfinal.core.JFinal.start(JFinal.java:160)
+	at com.fuchuan.nsc.common.config.MainConfig.main(MainConfig.java:119)
+
+2018-10-18 22:31:07
+[ERROR]-[Thread: main]-[com.jfinal.kit.LogKit.error()]: port: 80 already in use!
+java.lang.IllegalStateException: port: 80 already in use!
+	at com.jfinal.server.jetty.JettyServer.doStart(JettyServer.java:86)
+	at com.jfinal.server.jetty.JettyServer.start(JettyServer.java:69)
+	at com.jfinal.core.JFinal.start(JFinal.java:160)
+	at com.fuchuan.nsc.common.config.MainConfig.main(MainConfig.java:119)
+
+2018-10-18 22:32:03
+[ERROR]-[Thread: qtp540642172-17]-[com.jfinal.core.ActionHandler.handle()]: /reg
+java.lang.RuntimeException: File not found : E:\code\java\newsfeed-community\src\main\webapp/reg/index.html
+	at com.jfinal.template.source.FileSource.getContent(FileSource.java:70)
+	at com.jfinal.template.Engine.buildTemplateBySourceFactory(Engine.java:159)
+	at com.jfinal.template.Engine.getTemplate(Engine.java:144)
+	at com.jfinal.render.TemplateRender.render(TemplateRender.java:61)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:106)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:86)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1634)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:146)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:257)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1340)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1242)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:366)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.lang.Thread.run(Thread.java:748)
+
+2018-10-18 22:32:03
+[ERROR]-[Thread: qtp540642172-17]-[com.jfinal.core.JFinalFilter.doFilter()]: /reg
+java.lang.IllegalStateException: STREAM
+	at org.eclipse.jetty.server.Response.getWriter(Response.java:931)
+	at com.jfinal.render.ErrorRender.render(ErrorRender.java:60)
+	at com.jfinal.core.ActionHandler.handle(ActionHandler.java:122)
+	at com.jfinal.core.JFinalFilter.doFilter(JFinalFilter.java:86)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1634)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:533)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:146)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:548)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:257)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1340)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:473)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:1564)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1242)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
+	at org.eclipse.jetty.server.Server.handle(Server.java:503)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:364)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:260)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:103)
+	at org.eclipse.jetty.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
+	at org.eclipse.jetty.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:126)
+	at org.eclipse.jetty.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:366)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
+	at java.lang.Thread.run(Thread.java:748)

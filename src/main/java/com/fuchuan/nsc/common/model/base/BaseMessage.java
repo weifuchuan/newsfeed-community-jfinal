@@ -9,12 +9,12 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings("serial")
 public abstract class BaseMessage<M extends BaseMessage<M>> extends Model<M> implements IBean {
 
-	public void setId(java.lang.Long id) {
+	public void setId(java.lang.Integer id) {
 		set("id", id);
 	}
 	
-	public java.lang.Long getId() {
-		return getLong("id");
+	public java.lang.Integer getId() {
+		return getInt("id");
 	}
 
 	public void setContent(java.lang.String content) {
@@ -25,20 +25,20 @@ public abstract class BaseMessage<M extends BaseMessage<M>> extends Model<M> imp
 		return getStr("content");
 	}
 
-	public void setFromId(java.lang.Long fromId) {
+	public void setFromId(java.lang.Integer fromId) {
 		set("fromId", fromId);
 	}
 	
-	public java.lang.Long getFromId() {
-		return getLong("fromId");
+	public java.lang.Integer getFromId() {
+		return getInt("fromId");
 	}
 
-	public void setToId(java.lang.Long toId) {
+	public void setToId(java.lang.Integer toId) {
 		set("toId", toId);
 	}
 	
-	public java.lang.Long getToId() {
-		return getLong("toId");
+	public java.lang.Integer getToId() {
+		return getInt("toId");
 	}
 
 	public void setCreateAt(java.lang.Long createAt) {

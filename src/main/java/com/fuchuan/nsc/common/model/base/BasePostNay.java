@@ -9,28 +9,28 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings("serial")
 public abstract class BasePostNay<M extends BasePostNay<M>> extends Model<M> implements IBean {
 
-	public void setAccountId(java.lang.Long accountId) {
+	public void setAccountId(java.lang.Integer accountId) {
 		set("accountId", accountId);
 	}
 	
-	public java.lang.Long getAccountId() {
-		return getLong("accountId");
+	public java.lang.Integer getAccountId() {
+		return getInt("accountId");
 	}
 
-	public void setPostId(java.lang.Long postId) {
+	public void setPostId(java.lang.Integer postId) {
 		set("postId", postId);
 	}
 	
-	public java.lang.Long getPostId() {
-		return getLong("postId");
+	public java.lang.Integer getPostId() {
+		return getInt("postId");
 	}
 
-	public void setCreateAt(java.lang.Integer createAt) {
+	public void setCreateAt(java.lang.Long createAt) {
 		set("createAt", createAt);
 	}
 	
-	public java.lang.Integer getCreateAt() {
-		return getInt("createAt");
+	public java.lang.Long getCreateAt() {
+		return getLong("createAt");
 	}
 
 }

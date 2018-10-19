@@ -10,8 +10,7 @@ import com.jfinal.config.Plugins;
 import com.jfinal.config.Routes;
 import com.jfinal.core.JFinal;
 import com.jfinal.kit.Prop;
-import com.jfinal.kit.PropKit;
-import com.jfinal.plugin.cron4j.Cron4jPlugin;
+import com.jfinal.kit.PropKit; 
 import com.jfinal.plugin.ehcache.EhCachePlugin;
 import com.jfinal.template.Engine;
 import com.jfinal.ext.interceptor.SessionInViewInterceptor;
@@ -113,9 +112,7 @@ public class MainConfig extends JFinalConfig {
    */
   @Override
   public void configEngine(Engine me) {
-    //这里只有选择JFinal TPL的时候才用
-    //配置共享函数模板
-    //me.addSharedFunction("/view/common/layout.html")
+
   }
 
   public static void main(String[] args) {

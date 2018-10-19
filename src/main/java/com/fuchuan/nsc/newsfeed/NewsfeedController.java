@@ -1,4 +1,6 @@
 package com.fuchuan.nsc.newsfeed;
 
-public class NewsfeedController {
+import com.jfinal.core.Controller;
+
+public class NewsfeedController extends Controller {
 }

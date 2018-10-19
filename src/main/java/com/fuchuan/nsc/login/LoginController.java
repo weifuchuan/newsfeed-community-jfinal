@@ -2,7 +2,9 @@ package com.fuchuan.nsc.login;
 
 import com.fuchuan.nsc.common.model.Account;
 import com.jfinal.aop.Before;
+import com.jfinal.aop.Clear;
 import com.jfinal.aop.Inject;
+import com.jfinal.core.ActionKey;
 import com.jfinal.core.Controller;
 import com.jfinal.ext.interceptor.POST;
 import com.jfinal.kit.Ret;
@@ -28,8 +30,21 @@ public class LoginController extends Controller {
   }
 
   @Before(POST.class)
-  public void isLogged(){
-
+  public void isLogged() {
+    Account me = getAttr(LoginService.loginAccountCacheName);
+    if (me == null) {
+      renderJson(Ret.fail());
+    } else {
+      renderJson(Ret.ok("account", me));
+    }
   }
+
+  @Clear
+	@ActionKey("/logout")
+	public void logout() {
+		srv.logout(getCookie(LoginService.sessionIdName));
+    removeCookie(LoginService.sessionIdName);
+    renderText("");
+	}
 
 }

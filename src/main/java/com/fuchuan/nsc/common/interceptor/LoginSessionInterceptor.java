@@ -2,7 +2,9 @@ package com.fuchuan.nsc.common.interceptor;
 
 import com.fuchuan.nsc.common.kit.IpKit;
 import com.fuchuan.nsc.common.model.Account;
+import com.fuchuan.nsc.common.model.Remind;
 import com.fuchuan.nsc.login.LoginService;
+import com.fuchuan.nsc.remind.RemindService;
 import com.jfinal.aop.Interceptor;
 import com.jfinal.aop.Invocation;
 import com.jfinal.core.Controller;
@@ -28,8 +30,10 @@ public class LoginSessionInterceptor implements Interceptor {
         loginAccount = LoginService.me.loginWithSessionId(sessionId, loginIp);
       }
       if (loginAccount != null) {
+        loginAccount.setPassword("");
         // 用户登录账号
         c.setAttr(LoginService.loginAccountCacheName, loginAccount);
+
       } else {
         c.removeCookie(LoginService.sessionIdName); // cookie 登录未成功，证明该 cookie 已经没有用处，删之
       }

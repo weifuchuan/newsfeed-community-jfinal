@@ -7,7 +7,6 @@ encoding//src/main/resources/config.properties=utf-8
 encoding//src/main/resources/log4j.properties=utf-8
 encoding//src/main/resources/webdefault.xml=utf-8
 encoding//src/main/webapp/WEB-INF/web.xml=utf-8
-encoding//src/main/webapp/index.html=utf-8
 encoding//src/test/java=UTF-8
 encoding//src/test/resources=UTF-8
 encoding/<project>=UTF-8
