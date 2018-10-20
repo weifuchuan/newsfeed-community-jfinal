@@ -7,5 +7,5 @@ import com.fuchuan.nsc.common.model.base.BasePost;
  */
 @SuppressWarnings("serial")
 public class Post extends BasePost<Post> {
-	
+	public static final Post dao = new Post().dao();
 }

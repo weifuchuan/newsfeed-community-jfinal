@@ -7,5 +7,5 @@ import com.fuchuan.nsc.common.model.base.BasePostLike;
  */
 @SuppressWarnings("serial")
 public class PostLike extends BasePostLike<PostLike> {
-	
+	public static final PostLike dao = new PostLike().dao();
 }

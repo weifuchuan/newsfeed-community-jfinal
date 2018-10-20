@@ -7,5 +7,5 @@ import com.fuchuan.nsc.common.model.base.BaseFollow;
  */
 @SuppressWarnings("serial")
 public class Follow extends BaseFollow<Follow> {
-	
+	public static final Follow dao = new Follow().dao();
 }

@@ -7,5 +7,5 @@ import com.fuchuan.nsc.common.model.base.BaseAccount;
  */
 @SuppressWarnings("serial")
 public class Account extends BaseAccount<Account> {
-	
+	public static final Account dao = new Account().dao();
 }

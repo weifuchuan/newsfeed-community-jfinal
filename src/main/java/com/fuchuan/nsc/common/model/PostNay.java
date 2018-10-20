@@ -7,5 +7,5 @@ import com.fuchuan.nsc.common.model.base.BasePostNay;
  */
 @SuppressWarnings("serial")
 public class PostNay extends BasePostNay<PostNay> {
-	
+	public static final PostNay dao = new PostNay().dao();
 }

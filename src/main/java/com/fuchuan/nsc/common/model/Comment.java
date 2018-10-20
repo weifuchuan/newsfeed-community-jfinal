@@ -7,5 +7,5 @@ import com.fuchuan.nsc.common.model.base.BaseComment;
  */
 @SuppressWarnings("serial")
 public class Comment extends BaseComment<Comment> {
-	
+	public static final Comment dao = new Comment().dao();
 }
