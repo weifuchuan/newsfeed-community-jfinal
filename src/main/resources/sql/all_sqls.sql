@@ -13,3 +13,7 @@
 #namespace("comment")
   #include("comment.sql")
 #end
+
+#namespace("newsfeed")
+	#include("newsfeed.sql")
+#end

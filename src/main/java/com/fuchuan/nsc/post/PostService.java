@@ -153,7 +153,7 @@ public class PostService {
 	public Ret getComments(int id) {
 		SqlPara sqlPara = Db.getSqlPara("comment.findByPostId", id);
 		List<Record> comments = Db.find(sqlPara);
-		return Ret.by("comments", comments);
+		return Ret.ok("comments", comments);
 	}
 
 	public Ret comment(String content, int postId, int accountId, long createAt, Integer refId) {

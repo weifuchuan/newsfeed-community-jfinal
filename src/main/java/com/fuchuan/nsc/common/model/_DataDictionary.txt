@@ -24,9 +24,8 @@ Table: follow
 ----------+------------+------+-----+---------+---------
  Field    | Type       | Null | Key | Default | Remarks 
 ----------+------------+------+-----+---------+---------
- id       | INT(10)    | NO   | PRI |         |         
- fromId   | INT(10)    | NO   |     |         |         
- toId     | INT(10)    | NO   |     |         |         
+ fromId   | INT(10)    | NO   | PRI |         |         
+ toId     | INT(10)    | NO   | PRI |         |         
  createAt | BIGINT(19) | NO   |     |         |         
 ----------+------------+------+-----+---------+---------
 

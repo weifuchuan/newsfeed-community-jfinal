@@ -8,4 +8,12 @@ import com.fuchuan.nsc.common.model.base.BaseNewsfeed;
 @SuppressWarnings("serial")
 public class Newsfeed extends BaseNewsfeed<Newsfeed> {
 	public static final Newsfeed dao = new Newsfeed().dao();
+
+	// refType
+	public static final int PUBLISH_POST = 0; // 发布帖子
+	public static final int COMMENT_POST = 1; // 回复帖子
+	public static final int FOLLOW_ACCOUNT = 2; // 关注用户
+
+	// refParentType
+	public static final int POST = 3; // 帖子
 }

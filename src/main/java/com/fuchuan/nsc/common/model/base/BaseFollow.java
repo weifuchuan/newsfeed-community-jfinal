@@ -9,14 +9,6 @@ import com.jfinal.plugin.activerecord.IBean;
 @SuppressWarnings("serial")
 public abstract class BaseFollow<M extends BaseFollow<M>> extends Model<M> implements IBean {
 
-	public void setId(java.lang.Integer id) {
-		set("id", id);
-	}
-	
-	public java.lang.Integer getId() {
-		return getInt("id");
-	}
-
 	public void setFromId(java.lang.Integer fromId) {
 		set("fromId", fromId);
 	}

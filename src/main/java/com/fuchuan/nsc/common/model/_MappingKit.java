@@ -18,7 +18,8 @@ public class _MappingKit {
 	public static void mapping(ActiveRecordPlugin arp) {
 		arp.addMapping("account", "id", Account.class);
 		arp.addMapping("comment", "id", Comment.class);
-		arp.addMapping("follow", "id", Follow.class);
+		// Composite Primary Key order: fromId,toId
+		arp.addMapping("follow", "fromId,toId", Follow.class);
 		arp.addMapping("message", "id", Message.class);
 		arp.addMapping("newsfeed", "id", Newsfeed.class);
 		arp.addMapping("post", "id", Post.class);
