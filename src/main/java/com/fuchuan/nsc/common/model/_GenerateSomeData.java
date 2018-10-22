@@ -26,7 +26,8 @@ public class _GenerateSomeData {
 		PropKit.use("config.properties");
 
 		// 配置数据库连接池插件
-		DruidPlugin dbPlugin = new DruidPlugin(PropKit.get("jdbcUrl"), PropKit.get("user"), PropKit.get("password"));
+		DruidPlugin dbPlugin = new DruidPlugin(PropKit.get("jdbcUrl"),
+				PropKit.get("user"), PropKit.get("password"));
 		// orm映射 配置ActiveRecord插件
 		ActiveRecordPlugin arp = new ActiveRecordPlugin(dbPlugin);
 		arp.setShowSql(PropKit.getBoolean("devMode"));
@@ -118,22 +119,31 @@ public class _GenerateSomeData {
 //			}
 //		});
 
+//		runnableList.add(() -> {
+//			List<Post> posts = Post.dao.find("select * from `post` order by createAt desc");
+//			List<Account> accounts = Account.dao.find("select * from account");
+//			List<Follow> follows = Follow.dao.find("select * from follow");
+//			List<Comment> comments = Comment.dao.find("select * from `comment`");
+//			NewsfeedService srv = NewsfeedService.me;
+//			for (Post post : posts) {
+//				srv.add(post.getAccountId(), Newsfeed.PUBLISH_POST, post.getId(), null, null, post.getCreateAt());
+//			}
+//			for (Follow follow : follows) {
+//				srv.add(follow.getFromId(), Newsfeed.FOLLOW_ACCOUNT, follow.getToId(), null, null, follow.getCreateAt());
+//			}
+//			for (Comment comment : comments) {
+//				srv.add(comment.getAccountId(), Newsfeed.COMMENT_POST, comment.getId(), Newsfeed.POST, comment.getPostId(),
+//						comment.getCreateAt());
+//			}
+//		});
+
 		runnableList.add(() -> {
-			List<Post> posts = Post.dao.find("select * from `post` order by createAt desc");
 			List<Account> accounts = Account.dao.find("select * from account");
-			List<Follow> follows = Follow.dao.find("select * from follow");
-			List<Comment> comments = Comment.dao.find("select * from `comment`");
-			NewsfeedService srv = NewsfeedService.me;
-			for (Post post : posts) {
-				srv.add(post.getAccountId(), Newsfeed.PUBLISH_POST, post.getId(), null, null, post.getCreateAt());
-			}
-			for (Follow follow : follows) {
-				srv.add(follow.getFromId(), Newsfeed.FOLLOW_ACCOUNT, follow.getToId(), null, null, follow.getCreateAt());
-			}
-			for (Comment comment : comments) {
-				srv.add(comment.getAccountId(), Newsfeed.COMMENT_POST, comment.getId(), Newsfeed.POST, comment.getPostId(),
-						comment.getCreateAt());
-			}
+			accounts.forEach(a -> {
+				a.setUsername("user-" + a.getId());
+				a.setPassword("user-" + a.getId());
+				a.update(); 
+			});
 		});
 
 		runnableList.forEach(Runnable::run);
