@@ -2,9 +2,11 @@ package com.fuchuan.nsc.post;
 
 import com.fuchuan.nsc.common.model.Account;
 import com.fuchuan.nsc.common.model.Comment;
+import com.fuchuan.nsc.common.model.Newsfeed;
 import com.fuchuan.nsc.common.model.Post;
 import com.fuchuan.nsc.common.model.PostLike;
 import com.fuchuan.nsc.common.model.PostNay;
+import com.fuchuan.nsc.newsfeed.NewsfeedService;
 import com.jfinal.aop.Before;
 import com.jfinal.kit.Kv;
 import com.jfinal.kit.Ret;
@@ -38,6 +40,7 @@ public class PostService {
 		try {
 			if (post.save()) {
 				ret = Ret.ok();
+				NewsfeedService.me.add(accountId, Newsfeed.PUBLISH_POST, post.getId(), null, null, post.getCreateAt()); 
 			} else {
 				ret = Ret.fail("msg", "保存失败");
 			}
@@ -169,6 +172,7 @@ public class PostService {
 		try {
 			if (comment.save()) {
 				ret = Ret.ok("id", comment.getId());
+				NewsfeedService.me.add(accountId, Newsfeed.COMMENT_POST, comment.getId(), Newsfeed.POST, postId, createAt); 
 			} else {
 				ret = Ret.fail("msg", "评论失败");
 			}

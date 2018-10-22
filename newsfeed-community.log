@@ -5439,3 +5439,50 @@ Caused by: java.io.IOException: 你的主机中的软件中止了一个已建立
 	at sun.nio.ch.SocketChannelImpl.write(Unknown Source)
 	at org.eclipse.jetty.io.ChannelEndPoint.flush(ChannelEndPoint.java:264)
 	... 51 more
+
+2018-10-21 18:15:01
+[WARN]-[Thread: qtp863125040-17]-[com.jfinal.plugin.ehcache.CacheKit.getOrAddCache()]: Could not find cache config [post], using default.
+
+2018-10-21 20:00:31
+[WARN]-[Thread: qtp517938326-36]-[com.jfinal.core.ActionHandler.handleActionException()]: 400 Bad Request: /post/get
+Can not parse the parameter "NaN" to Integer value.
+
+2018-10-21 20:00:31
+[WARN]-[Thread: qtp517938326-18]-[com.jfinal.core.ActionHandler.handleActionException()]: 400 Bad Request: /post/get
+Can not parse the parameter "NaN" to Integer value.
+
+2018-10-21 20:00:31
+[WARN]-[Thread: qtp517938326-15]-[com.jfinal.core.ActionHandler.handleActionException()]: 400 Bad Request: /post/get
+Can not parse the parameter "NaN" to Integer value.
+
+2018-10-21 20:00:55
+[WARN]-[Thread: qtp517938326-17]-[com.jfinal.core.ActionHandler.handleActionException()]: 400 Bad Request: /post/get
+Can not parse the parameter "NaN" to Integer value.
+
+2018-10-21 20:02:47
+[WARN]-[Thread: qtp517938326-37]-[com.jfinal.core.ActionHandler.handleActionException()]: 400 Bad Request: /post/get
+Can not parse the parameter "NaN" to Integer value.
+
+2018-10-21 20:10:23
+[WARN]-[Thread: qtp517938326-37]-[com.jfinal.core.ActionHandler.handleActionException()]: 400 Bad Request: /post/get
+Can not parse the parameter "NaN" to Integer value.
+
+2018-10-21 20:12:58
+[WARN]-[Thread: qtp517938326-37]-[com.jfinal.core.ActionHandler.handleActionException()]: 400 Bad Request: /post/get
+Can not parse the parameter "NaN" to Integer value.
+
+2018-10-21 20:13:12
+[WARN]-[Thread: qtp517938326-17]-[com.jfinal.core.ActionHandler.handleActionException()]: 400 Bad Request: /post/get
+Can not parse the parameter "NaN" to Integer value.
+
+2018-10-21 20:14:02
+[WARN]-[Thread: qtp517938326-37]-[com.jfinal.core.ActionHandler.handleActionException()]: 400 Bad Request: /post/get
+Can not parse the parameter "NaN" to Integer value.
+
+2018-10-21 20:21:16
+[WARN]-[Thread: qtp517938326-18]-[com.jfinal.core.ActionHandler.handleActionException()]: 400 Bad Request: /post/get
+Can not parse the parameter "NaN" to Integer value.
+
+2018-10-21 20:23:01
+[WARN]-[Thread: qtp517938326-39]-[com.jfinal.core.ActionHandler.handleActionException()]: 400 Bad Request: /post/get
+Can not parse the parameter "NaN" to Integer value.

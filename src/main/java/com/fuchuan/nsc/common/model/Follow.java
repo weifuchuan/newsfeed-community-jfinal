@@ -8,4 +8,10 @@ import com.fuchuan.nsc.common.model.base.BaseFollow;
 @SuppressWarnings("serial")
 public class Follow extends BaseFollow<Follow> {
 	public static final Follow dao = new Follow().dao();
+	
+	// 关系 relation
+	public static final int NO_RELATION = 0; // 互相不关注 
+	public static final int FANS = 1; // 粉丝
+	public static final int FOLLOW = 2; // 关注
+	public static final int FRIEND = 3; // 互相关注 
 }
