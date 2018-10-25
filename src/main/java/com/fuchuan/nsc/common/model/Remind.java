@@ -8,4 +8,11 @@ import com.fuchuan.nsc.common.model.base.BaseRemind;
 @SuppressWarnings("serial")
 public class Remind extends BaseRemind<Remind> {
 	public static final Remind dao = new Remind().dao();
+
+	public static final String REFER_ME = "referMe";
+	public static final String MESSAGE = "message";
+	public static final String FANS = "fans";
+	public static final String COMMENT = "comment";
+	public static final String LIKE = "like";
+	public static final String NAY = "nay";
 }

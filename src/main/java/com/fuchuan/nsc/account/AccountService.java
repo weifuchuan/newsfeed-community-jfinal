@@ -5,7 +5,12 @@ import java.util.List;
 
 import com.fuchuan.nsc.common.model.Account;
 import com.fuchuan.nsc.common.model.Follow;
+import com.fuchuan.nsc.common.model.Newsfeed;
+import com.fuchuan.nsc.login.LoginService;
+import com.fuchuan.nsc.newsfeed.NewsfeedService;
 import com.jfinal.kit.Ret;
+import com.jfinal.plugin.activerecord.Db;
+import com.jfinal.plugin.activerecord.Record;
 
 public class AccountService {
 	public static final AccountService me = new AccountService();
@@ -46,6 +51,8 @@ public class AccountService {
 		follow.setCreateAt(new Date().getTime());
 		try {
 			if (follow.save()) {
+				NewsfeedService.me.add(fromId, Newsfeed.FOLLOW_ACCOUNT, toId, null,
+						null, follow.getCreateAt());
 				return Ret.ok();
 			} else {
 				return Ret.fail("msg", "关注失败");
@@ -63,6 +70,45 @@ public class AccountService {
 			return Ret.ok();
 		}
 		return Ret.fail("msg", "没关注");
+	}
+
+	public Ret changeAvatar(int accountId, String avatar) {
+		int cnt = Db.update("update `account` set `avatar` = ? where id = ? ",
+				avatar, accountId);
+		if (cnt == 1) {
+			return Ret.ok();
+		} else {
+			return Ret.fail();
+		}
+	}
+
+	public Ret changeUsername(int id, String username) {
+		int cnt = Db.update("update `account` set `username` = ? where id = ? ",
+				username, id);
+		if (cnt == 1) {
+			return Ret.ok();
+		} else {
+			return Ret.fail();
+		}
+	}
+
+	public Ret changePassword(int id, String newPassword, String oldPassword) {
+		int cnt = Db.update(
+				"update `account` set `password` = ? where id = ? and password = ? ",
+				newPassword, id, oldPassword);
+		if (cnt == 1) {
+			return Ret.ok();
+		} else {
+			return Ret.fail();
+		}
+	}
+
+	public List<Record> followList(int accountId) {
+		return Db.find(Db.getSqlPara("account.followList", accountId));
+	}
+	
+	public List<Record> fansList(int accountId) {
+		return Db.find(Db.getSqlPara("account.fansList", accountId));
 	}
 
 }

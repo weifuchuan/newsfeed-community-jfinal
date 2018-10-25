@@ -10,10 +10,10 @@ import com.jfinal.aop.Invocation;
 import com.jfinal.core.Controller;
 
 /**
- * 从 cookie 中获取 sessionId，如果获取到则根据该值使用 LoginService
- * 得到登录的 Account 对象 ---> loginAccount，供后续的流程使用
+   * 从 cookie 中获取 sessionId，如果获取到则根据该值使用 LoginService
+   * 得到登录的 Account 对象 ---> loginAccount，供后续的流程使用
  *
- * 注意：将此拦截器设置为全局拦截器，所有 action 都需要
+   * 注意：将此拦截器设置为全局拦截器，所有 action 都需要
  */
 public class LoginSessionInterceptor implements Interceptor {
 

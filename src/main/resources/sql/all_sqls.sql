@@ -17,3 +17,7 @@
 #namespace("newsfeed")
 	#include("newsfeed.sql")
 #end
+
+#namespace("message")
+	#include("message.sql")
+#end

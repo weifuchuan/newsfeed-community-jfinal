@@ -2,6 +2,7 @@ package com.fuchuan.nsc.common.config;
 
 import com.fuchuan.nsc.common.interceptor.LoginSessionInterceptor;
 import com.fuchuan.nsc.common.model._MappingKit;
+import com.fuchuan.nsc.remind.RemindSockIOServer;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
 import com.jfinal.config.Interceptors;
@@ -13,6 +14,7 @@ import com.jfinal.kit.Prop;
 import com.jfinal.kit.PropKit; 
 import com.jfinal.plugin.ehcache.EhCachePlugin;
 import com.jfinal.template.Engine;
+import com.jfinal.ext.handler.UrlSkipHandler;
 import com.jfinal.ext.interceptor.SessionInViewInterceptor;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.json.FastJsonFactory;
@@ -23,9 +25,8 @@ import com.jfinal.render.ViewType;
 public class MainConfig extends JFinalConfig {
 
   private static Prop p = PropKit.use("config.properties");
-  /**
-   * 配置JFinal常量
-   */
+  private RemindSockIOServer server; 
+  
   @Override
   public void configConstant(Constants me) {
     //读取数据库配置文件
@@ -47,23 +48,13 @@ public class MainConfig extends JFinalConfig {
 
     //设置启用依赖注入
     me.setInjectDependency(true);
-  }
-
-  /**
-   * 配置JFinal路由映射
-   */
+  } 
+  
   @Override
   public void configRoute(Routes me) {
     me.add(new FrontRoutes());
   }
-
-  /**
-   * 配置JFinal插件
-   * 数据库连接池
-   * ORM
-   * 缓存等插件
-   * 自定义插件
-   */
+ 
   @Override
   public void configPlugin(Plugins me) {
     //配置数据库连接池插件
@@ -89,31 +80,33 @@ public class MainConfig extends JFinalConfig {
     me.add(arp);
     me.add(new EhCachePlugin());
   }
-
-  /**
-   * 配置全局拦截器
-   */
+ 
   @Override
   public void configInterceptor(Interceptors me) {
     me.add(new LoginSessionInterceptor());
     me.addGlobalActionInterceptor(new SessionInViewInterceptor());
   }
-
-  /**
-   * 配置全局处理器
-   */
+ 
   @Override
   public void configHandler(Handlers me) {
-
+  	me.add(new UrlSkipHandler("/proxy/.*", true)); 
   }
-
-  /**
-   * 配置模板引擎
-   */
+ 
   @Override
   public void configEngine(Engine me) {
 
   }
+  
+//  @Override
+//  public void afterJFinalStart() {
+//  	server=new RemindSockIOServer();
+//  	server.start();
+//  }
+//  
+//  @Override
+//  public void beforeJFinalStop() {
+//  	server.stop();
+//  }
 
   public static void main(String[] args) {
     JFinal.start("src/main/webapp", 80, "/", 5);

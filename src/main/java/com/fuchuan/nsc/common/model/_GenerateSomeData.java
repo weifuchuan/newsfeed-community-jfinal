@@ -6,6 +6,7 @@ import com.fuchuan.nsc.common.model.Post;
 import com.fuchuan.nsc.common.model.PostLike;
 import com.fuchuan.nsc.common.model.PostNay;
 import com.fuchuan.nsc.common.model._MappingKit;
+import com.fuchuan.nsc.message.MessageService;
 import com.fuchuan.nsc.newsfeed.NewsfeedService;
 import com.jfinal.kit.PropKit;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
@@ -136,13 +137,29 @@ public class _GenerateSomeData {
 //						comment.getCreateAt());
 //			}
 //		});
+//
+//		runnableList.add(() -> {
+//			List<Account> accounts = Account.dao.find("select * from account");
+//			accounts.forEach(a -> {
+//				a.setUsername("user-" + a.getId());
+//				a.setPassword("user-" + a.getId());
+//				a.update(); 
+//			});
+//		});
 
 		runnableList.add(() -> {
 			List<Account> accounts = Account.dao.find("select * from account");
 			accounts.forEach(a -> {
-				a.setUsername("user-" + a.getId());
-				a.setPassword("user-" + a.getId());
-				a.update(); 
+				for (int i = 0; i < 100; i++)
+					for (Account account : accounts) {
+						if (a.getId() != account.getId()
+								&& Math.round(Math.random()) == 0) {
+							MessageService.me.send(a.getId(), account.getId(),
+									i + ": The message which from <b>" + a.getUsername()
+											+ "</b> send to <b>" + account.getUsername() + "</b>",
+									new Date().getTime());
+						}
+					}
 			});
 		});
 
