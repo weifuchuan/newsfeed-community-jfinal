@@ -49,7 +49,7 @@
 			<version>2018.11</version>
 			<!-- 此处的 scope 值为 compile 仅为支持 IDEA 下启动项目 打 war 包时需要改成 provided，以免将一些无用的 
 				jar 打进去 -->
-			<scope>compile</scope>
+			<scope>provided</scope>
 		</dependency>
 
 		<!-- 避免控制台输出如下提示信息： SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder". 
@@ -59,7 +59,7 @@
 			<artifactId>slf4j-nop</artifactId>
 			<version>1.7.25</version>
 			<!-- 打包前改成 provided，此处使用 compile 仅为支持 IDEA -->
-			<scope>compile</scope>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -137,7 +137,7 @@
 
 	</dependencies>
 	<build>
-		<finalName>jfinal-club</finalName>
+		<finalName>newsfeed-community</finalName>
 		<plugins>
 
 			<plugin>

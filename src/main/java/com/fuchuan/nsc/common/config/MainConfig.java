@@ -18,6 +18,7 @@ import com.jfinal.ext.handler.UrlSkipHandler;
 import com.jfinal.ext.interceptor.SessionInViewInterceptor;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.json.FastJsonFactory;
+import com.jfinal.json.MixedJsonFactory;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.activerecord.dialect.MysqlDialect;
 import com.jfinal.render.ViewType;
@@ -44,7 +45,7 @@ public class MainConfig extends JFinalConfig {
     //设置404渲染视图
     //me.setError404View("404.html");
     //设置json工厂
-    me.setJsonFactory(FastJsonFactory.me());
+    me.setJsonFactory(MixedJsonFactory.me());
 
     //设置启用依赖注入
     me.setInjectDependency(true);
