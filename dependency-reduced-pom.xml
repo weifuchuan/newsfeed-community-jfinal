@@ -69,7 +69,7 @@
               <finalName>newsfeed-community</finalName>
               <transformers>
                 <transformer>
-                  <mainClass>com.fuchuan.nsc.common.config.MainConfig</mainClass>
+                  <mainClass>com.fuchuan.nsc.App</mainClass>
                 </transformer>
               </transformers>
             </configuration>

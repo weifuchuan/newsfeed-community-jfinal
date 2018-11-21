@@ -1,5 +1,5 @@
 package com.fuchuan.nsc.common.config;
-
+ 
 import com.fuchuan.nsc.common.interceptor.LoginSessionInterceptor;
 import com.fuchuan.nsc.common.model._MappingKit;
 import com.jfinal.config.Constants;
@@ -16,27 +16,17 @@ import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.activerecord.dialect.MysqlDialect;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.plugin.ehcache.EhCachePlugin;
-import com.jfinal.render.ViewType;
-import com.jfinal.server.undertow.UndertowServer;
+import com.jfinal.render.ViewType; 
 import com.jfinal.template.Engine;
 
 public class MainConfig extends JFinalConfig {
 
-  private static Prop p = PropKit.use("config.properties")
-      .appendIfExists("config_pro.txt");
-
-  public static void main(String[] args) {
-    System.out.println("devMode = " + p.getBoolean("devMode"));
-    System.out.println("port = " + p.getInt("port"));
-    UndertowServer.start(
-        MainConfig.class,
-        p.getInt("port", 8000),
-        p.getBoolean("devMode", false)
-    );
-  }
+  public static Prop p;
 
   @Override
   public void configConstant(Constants me) {
+    p = PropKit.use("config.properties").appendIfExists("config_pro.txt");
+    
     // 设置当前是否为开发模式
     me.setDevMode(p.getBoolean("devMode"));
     // 设置默认上传文件保存路径 getFile等使用
