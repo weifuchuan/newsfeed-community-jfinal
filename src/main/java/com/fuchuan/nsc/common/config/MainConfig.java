@@ -22,7 +22,18 @@ import com.jfinal.template.Engine;
 
 public class MainConfig extends JFinalConfig {
 
-  private static Prop p = PropKit.use("config.properties").appendIfExists("config_pro.properties");
+  private static Prop p = PropKit.use("config.properties")
+      .appendIfExists("config_pro.txt");
+
+  public static void main(String[] args) {
+    System.out.println("devMode = " + p.getBoolean("devMode"));
+    System.out.println("port = " + p.getInt("port"));
+    UndertowServer.start(
+        MainConfig.class,
+        p.getInt("port", 8000),
+        p.getBoolean("devMode", false)
+    );
+  }
 
   @Override
   public void configConstant(Constants me) {
@@ -56,7 +67,7 @@ public class MainConfig extends JFinalConfig {
     DruidPlugin dbPlugin = new DruidPlugin(p.get("jdbcUrl"), p.get("user"), p.get("password"));
     // orm映射 配置ActiveRecord插件
     ActiveRecordPlugin arp = new ActiveRecordPlugin(dbPlugin);
-    arp.setShowSql(p.getBoolean("devMode"));
+    arp.setShowSql(p.getBoolean("devMode", false));
     arp.setDialect(new MysqlDialect());
     dbPlugin.setDriverClass("com.mysql.jdbc.Driver");
     /******** 在此添加数据库 表-Model 映射 *********/
@@ -90,12 +101,6 @@ public class MainConfig extends JFinalConfig {
   public void configEngine(Engine me) {
     me.setBaseTemplatePath("webapp");
     me.setToClassPathSourceFactory();
-  }
-
-  public static void main(String[] args) {
-    System.out.println("devMode   "+p.getBoolean("devMode"));
-    System.out.println("fuck   "+p.get("fuck"));
-    UndertowServer.start(MainConfig.class, 80, false);
   }
 
 }
